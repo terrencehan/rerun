@@ -157,7 +157,7 @@ pub fn apply_style_and_install_loaders(egui_ctx: &egui::Context) {
 
 fn set_themes(egui_ctx: &egui::Context) {
     // It's the same fonts in dark/light mode:
-    design_tokens_of(egui::Theme::Dark).set_fonts(egui_ctx);
+    design_tokens_of(egui::Theme::Dark);
 
     for theme in [egui::Theme::Dark, egui::Theme::Light] {
         let mut style = std::sync::Arc::unwrap_or_clone(egui_ctx.style_of(theme));
